@@ -8,11 +8,17 @@
 <script lang="ts">
 import Vue from 'vue';
 import HelloWorld from './components/HelloWorld.vue';
+import {flag, print} from './utils/tool';
 
 export default Vue.extend({
   name: 'App',
   components: {
     HelloWorld
+  },
+  mounted() {
+    const msg = 'hello vuejs + typescript';
+    print(msg);
+    print(flag, 23);
   }
 });
 </script>
